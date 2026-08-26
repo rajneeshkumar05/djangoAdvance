@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Django file upload demo</title>
+    </head>
+    <body>
+        <a  href="{% url 'upload_profile' %}">Upload Profile Picture</a> |
+        <a  href="{% url 'view_profile' %}">View Profile Picture</a>
+        <hr>
+        {% if messages %}
+        <ul>
+            {% for message in messages %}
+            <li>{{message}}</li>
+            {% endfor %}
+        </ul>
+        {% endif %}
+    </body>
+    {% block content %}
+
+    {% endblock %}
+</html>
